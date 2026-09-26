@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Вход - ЛанчТайм</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="auth-page">
+  <form class="auth-form" action="https://httpbin.org/post" method="post">
+    <h1>Вход в личный кабинет</h1>
+    <p>
+      <label for="login">Логин</label>
+      <input id="login" type="text" name="login">
+    </p>
+    <p>
+      <label for="password">Пароль</label>
+      <input id="password" type="password" name="password">
+    </p>
+    <p>
+      <label><input type="checkbox" name="remember" value="yes"> Запомнить меня</label>
+    </p>
+    <button type="submit">Войти</button>
+    <p><a href="index.html">На главную</a></p>
+  </form>
+</body>
+</html>

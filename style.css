@@ -1,0 +1,206 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Montserrat', Arial, sans-serif;
+  font-size: 16px;
+  color: #333333;
+}
+
+/* Шапка */
+
+header {
+  background-color: #006600;
+  text-align: center;
+  padding: 25px;
+  margin-bottom: 20px;
+}
+
+header h1 {
+  font-size: 30px;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 10px;
+}
+
+nav {
+  padding: 5px;
+  margin: 0;
+}
+
+nav a {
+  font-family: 'Montserrat', Arial, sans-serif;
+  font-size: 15px;
+  color: #ffffff;
+  text-decoration: none;
+  margin: 0 10px;
+}
+
+nav a:hover {
+  color: #ffcc00;
+}
+
+/* Основное содержимое */
+
+main {
+  width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+section {
+  margin-bottom: 40px;
+}
+
+h2 {
+  font-size: 24px;
+  font-weight: 600;
+  color: #006600;
+  margin-bottom: 15px;
+}
+
+p {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+img {
+  width: 500px;
+  height: 300px;
+  margin-bottom: 15px;
+}
+
+ul {
+  margin-left: 40px;
+}
+
+li {
+  margin-bottom: 5px;
+}
+
+/* Таблица */
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  text-align: left;
+}
+
+th, td {
+  border: 1px solid #999999;
+  padding: 10px;
+  font-size: 15px;
+}
+
+th {
+  background-color: #006600;
+  color: #ffffff;
+  text-align: center;
+  font-weight: 700;
+}
+
+/* Формы */
+
+form {
+  width: 600px;
+  padding: 20px;
+  background-color: #f2f2f2;
+  border: 1px solid #cccccc;
+}
+
+label {
+  font-size: 14px;
+  font-weight: 600;
+  color: #006600;
+}
+
+input, select, textarea {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  margin-bottom: 15px;
+  font-family: 'Montserrat', Arial, sans-serif;
+  font-size: 15px;
+  color: #333333;
+  border: 1px solid #999999;
+}
+
+input[type="radio"], input[type="checkbox"] {
+  width: auto;
+  margin: 0;
+}
+
+button {
+  padding: 12px 25px;
+  background-color: #006600;
+  color: #ffffff;
+  font-family: 'Montserrat', Arial, sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  border: none;
+}
+
+button:hover {
+  background-color: #cc6600;
+}
+
+/* Страница входа */
+
+body.auth-page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url('auth-bg.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+.auth-form {
+  width: 400px;
+  padding: 30px;
+  background-color: #ffffff;
+  border: 1px solid #cccccc;
+}
+
+.auth-form h1 {
+  font-size: 22px;
+  color: #333333;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.auth-form a {
+  color: #006600;
+  font-size: 14px;
+  text-decoration: none;
+}
+
+/* Футер */
+
+footer {
+  background-color: #000000;
+  color: #ffffff;
+  text-align: center;
+  padding: 25px;
+  margin-top: 20px;
+}
+
+footer p {
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+
+footer a {
+  font-family: 'Montserrat', Arial, sans-serif;
+  font-size: 14px;
+  color: #99d6b3;
+  text-decoration: none;
+}
+
+footer a:hover {
+  color: #ffcc00;
+}

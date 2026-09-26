@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>ЛанчТайм - доставка бизнес-ланчей в Москве</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>ЛанчТайм - доставка бизнес-ланчей в Москве</h1>
+    <nav>
+      <a href="#about">О компании</a>
+      <a href="#advantages">Преимущества</a>
+      <a href="#menu">Меню</a>
+      <a href="#feedback">Обратная связь</a>
+      <a href="auth.html">Вход</a>
+      <a href="#contacts">Контакты</a>
+    </nav>
+  </header>
+
+  <main>
+    <section id="about">
+      <h2>О компании</h2>
+      <img src="OIP.jpg" alt="Бизнес-ланч от компании ЛанчТайм">
+      <p>Компания «ЛанчТайм» уже более восьми лет доставляет свежие бизнес-ланчи в офисы и компании по всему центру Москвы. Мы готовим каждый заказ утром в день доставки из проверенных фермерских продуктов и привозим его горячим к назначенному времени. Никаких полуфабрикатов, только домашняя кухня.</p>
+    </section>
+
+    <section id="advantages">
+      <h2>Наши преимущества</h2>
+      <ul>
+        <li>Бесплатная доставка при заказе от 10 ланчей</li>
+        <li>Круглосуточный приём заказов на сайте и по телефону</li>
+        <li>Свежие продукты и контроль качества каждого блюда</li>
+        <li>Скидки для постоянных клиентов</li>
+      </ul>
+    </section>
+
+    <section id="menu">
+      <h2>Самые популярные блюда</h2>
+      <table>
+        <tr>
+          <th>Блюдо</th>
+          <th>Состав</th>
+          <th>Вес, г</th>
+          <th>Цена, руб.</th>
+        </tr>
+        <tr>
+          <td>Куриное филе с гречкой</td>
+          <td>Гречка, куриное филе, овощной салат</td>
+          <td>420</td>
+          <td>349</td>
+        </tr>
+        <tr>
+          <td>Паста «Карбонара»</td>
+          <td>Паста тальятелле, бекон, сливочный соус</td>
+          <td>400</td>
+          <td>379</td>
+        </tr>
+        <tr>
+          <td>Рыбное филе с рисом</td>
+          <td>Филе судака, рис, овощи на пару</td>
+          <td>430</td>
+          <td>399</td>
+        </tr>
+        <tr>
+          <td>Суп-пюре из тыквы</td>
+          <td>Тыква, сливки, семечки, гренки</td>
+          <td>300</td>
+          <td>259</td>
+        </tr>
+        <tr>
+          <td>Цезарь с курицей</td>
+          <td>Салат айсберг, курица, пармезан, соус</td>
+          <td>280</td>
+          <td>329</td>
+        </tr>
+        <tr>
+          <td>Борщ с пампушками</td>
+          <td>Говядина, свёкла, капуста, пампушки</td>
+          <td>350</td>
+          <td>289</td>
+        </tr>
+      </table>
+    </section>
+
+    <section id="feedback">
+      <h2>Обратная связь</h2>
+      <p>Заметили недочёт или хотите предложить идею? Напишите нам, мы отвечаем в течение одного рабочего дня.</p>
+      <form action="https://httpbin.org/post" method="post" enctype="multipart/form-data">
+        <p>
+          <label for="fio">ФИО</label>
+          <input id="fio" type="text" name="fio">
+        </p>
+        <p>
+          <label for="email">Email</label>
+          <input id="email" type="email" name="email">
+        </p>
+        <p>
+          <span>Откуда вы узнали о нас?</span><br>
+          <label><input type="radio" name="source" value="search" checked> Поисковая система</label><br>
+          <label><input type="radio" name="source" value="ad"> Реклама</label><br>
+          <label><input type="radio" name="source" value="friends"> Рекомендации знакомых</label><br>
+          <label><input type="radio" name="source" value="other"> Другое</label>
+        </p>
+        <p>
+          <label for="subject">Тип обращения</label>
+          <select id="subject" name="subject">
+            <option value="proposal">Предложение</option>
+            <option value="complaint">Жалоба</option>
+          </select>
+        </p>
+        <p>
+          <label for="message">Текст сообщения</label>
+          <textarea id="message" name="message" rows="5"></textarea>
+        </p>
+        <p>
+          <label for="attachment">Вложения</label>
+          <input id="attachment" type="file" name="attachment">
+        </p>
+        <p>
+          <label><input type="checkbox" name="consent"> Даю согласие на обработку персональных данных</label>
+        </p>
+        <button type="submit">Отправить</button>
+      </form>
+    </section>
+  </main>
+
+  <footer id="contacts">
+    <p>Телефон: <a href="tel:+74951234567">+7 (495) 123-45-67</a></p>
+    <p>Почта: <a href="mailto:zakaz@lanchtime.ru">zakaz@lanchtime.ru</a></p>
+    <p>Адрес: г. Москва, ул. Большая Дмитровка, д. 12</p>
+  </footer>
+</body>
+</html>
