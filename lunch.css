@@ -32,6 +32,8 @@
   color: #ffffff;
 }
 
+/* Все картинки квадратные, поэтому занимают одинаковую область */
+
 .dish img {
   width: 100%;
   border-radius: 35px;
@@ -43,19 +45,19 @@
   margin-top: 15px;
 }
 
+/* Место под название в две строки, чтобы вес и кнопка
+   у всех блюд стояли на одной высоте */
+
 .dish .name {
   font-size: 20px;
   font-weight: 600;
   margin-top: 5px;
+  min-height: 48px;
 }
-
-/* Отступ сверху отодвигает вес и кнопку к низу карточки,
-   поэтому у всех блюд они стоят на одной высоте */
 
 .dish .weight {
   color: #808080;
   font-size: 16px;
-  margin-top: auto;
 }
 
 .dish button {
