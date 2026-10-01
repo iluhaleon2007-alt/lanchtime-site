@@ -5,6 +5,9 @@
 }
 
 body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
   font-family: 'Montserrat', Arial, sans-serif;
   font-size: 16px;
   color: #333333;
@@ -27,6 +30,10 @@ header h1 {
 }
 
 nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
   padding: 5px;
   margin: 0;
 }
@@ -36,11 +43,15 @@ nav a {
   font-size: 15px;
   color: #ffffff;
   text-decoration: none;
-  margin: 0 10px;
 }
 
 nav a:hover {
   color: #ffcc00;
+}
+
+nav a.active {
+  color: #ffcc00;
+  font-weight: 700;
 }
 
 /* Основное содержимое */
@@ -49,6 +60,7 @@ main {
   width: 800px;
   margin: 0 auto;
   padding: 20px;
+  flex: 1;
 }
 
 section {
@@ -152,6 +164,7 @@ button:hover {
 body.auth-page {
   min-height: 100vh;
   display: flex;
+  flex-direction: row;
   align-items: center;
   justify-content: center;
   background-image: url('auth-bg.jpg');
@@ -203,4 +216,36 @@ footer a {
 
 footer a:hover {
   color: #ffcc00;
+}
+
+/* Адаптивность главной страницы */
+
+@media (max-width: 400px) {
+  main {
+    width: auto;
+    padding: 10px;
+  }
+
+  header h1 {
+    font-size: 22px;
+  }
+
+  img {
+    width: 100%;
+    height: auto;
+  }
+
+  table {
+    font-size: 12px;
+  }
+
+  th, td {
+    padding: 6px;
+    font-size: 12px;
+    word-wrap: break-word;
+  }
+
+  form {
+    width: 100%;
+  }
 }

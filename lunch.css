@@ -1,0 +1,101 @@
+/* Страница «Собрать ланч» */
+
+/* Блок со всеми блюдами - сетка на CSS Grid */
+
+.dishes {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+
+/* Блок каждого блюда - сетка на флекбоксах */
+
+.dish {
+  display: flex;
+  flex-direction: column;
+  padding: 30px 40px;
+  background-color: #ffffff;
+  border: 2px solid transparent;
+  border-radius: 35px;
+  cursor: pointer;
+  filter: drop-shadow(17px 19px 24px rgba(0, 0, 0, 0.13));
+}
+
+.dish:hover {
+  border: 2px solid #006600;
+}
+
+/* Контекстный селектор: кнопка меняет цвет при наведении на карточку */
+
+.dish:hover button {
+  background-color: #006600;
+  color: #ffffff;
+}
+
+.dish img {
+  width: 100%;
+  border-radius: 35px;
+}
+
+.dish .price {
+  font-size: 24px;
+  font-weight: 700;
+  margin-top: 15px;
+}
+
+.dish .name {
+  font-size: 20px;
+  font-weight: 600;
+  margin-top: 5px;
+}
+
+/* Отступ сверху отодвигает вес и кнопку к низу карточки,
+   поэтому у всех блюд они стоят на одной высоте */
+
+.dish .weight {
+  color: #808080;
+  font-size: 16px;
+  margin-top: auto;
+}
+
+.dish button {
+  margin-top: 15px;
+  padding: 10px 30px;
+  background-color: #f1eee9;
+  color: #333333;
+  font-family: 'Montserrat', Arial, sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+/* Планшеты */
+
+@media (max-width: 800px) {
+  .dishes {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .dish {
+    padding: 20px;
+  }
+}
+
+/* Смартфоны */
+
+@media (max-width: 600px) {
+  .dishes {
+    grid-template-columns: 1fr;
+  }
+
+  .dish {
+    padding: 15px;
+    border-radius: 20px;
+  }
+
+  .dish img {
+    border-radius: 20px;
+  }
+}

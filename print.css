@@ -1,0 +1,52 @@
+/* Стили для печати */
+
+@page {
+  margin: 2cm;
+}
+
+body {
+  color: #000000;
+  background: #ffffff;
+  font-size: 12pt;
+}
+
+/* Элементы управления при печати не нужны */
+
+nav,
+button,
+input,
+select,
+textarea {
+  display: none;
+}
+
+header,
+footer {
+  background: #ffffff;
+  color: #000000;
+  border-bottom: 1px solid #000000;
+  padding: 10px;
+}
+
+footer {
+  border-bottom: none;
+  border-top: 1px solid #000000;
+}
+
+.dish {
+  filter: none;
+  border: 1px solid #999999;
+}
+
+.dish button {
+  display: none;
+}
+
+a {
+  color: #000000;
+  text-decoration: underline;
+}
+
+img {
+  max-width: 100%;
+}
