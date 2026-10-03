@@ -81,6 +81,38 @@ main {
   cursor: pointer;
 }
 
+/* Форма заказа - две колонки на флексбоксах */
+
+.order-form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px 40px;
+  width: 100%;
+  align-items: flex-start;
+}
+
+.order-column {
+  flex: 1;
+}
+
+.order-column h3 {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+.note {
+  font-size: 14px;
+  font-style: italic;
+  color: #666666;
+  margin-bottom: 15px;
+}
+
+.order-buttons {
+  display: flex;
+  gap: 15px;
+}
+
 /* Планшеты */
 
 @media (max-width: 800px) {
@@ -94,6 +126,10 @@ main {
 
   .dish {
     padding: 20px;
+  }
+
+  .order-column {
+    flex: 1 1 100%;
   }
 }
 

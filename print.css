@@ -4,10 +4,22 @@
   margin: 2cm;
 }
 
+/* На бумаге нет экрана: обычный поток, без экрановых высот */
+
 body {
+  display: block;
+  min-height: 0;
   color: #000000;
   background: #ffffff;
   font-size: 12pt;
+}
+
+/* Страница входа: фоновая фотография на бумаге не нужна */
+
+body.auth-page {
+  display: block;
+  min-height: 0;
+  background-image: none;
 }
 
 /* Элементы управления при печати не нужны */
@@ -20,26 +32,58 @@ textarea {
   display: none;
 }
 
+/* Фиксированные ширины не помещаются на лист */
+
+main {
+  width: auto;
+  padding: 0;
+}
+
+.dishes {
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+.dish {
+  padding: 15px;
+  border-radius: 10px;
+  border: 1px solid #999999;
+  filter: none;
+}
+
+.dish img {
+  height: 120px;
+}
+
+.order-form {
+  width: 100%;
+}
+
+.order-column {
+  flex: 1 1 100%;
+}
+
+/* Тёмные фоны заменяем белым, белый текст - чёрным */
+
 header,
 footer {
   background: #ffffff;
   color: #000000;
-  border-bottom: 1px solid #000000;
-  padding: 10px;
+  border: none;
+  padding: 0;
+  margin: 0;
 }
 
-footer {
-  border-bottom: none;
-  border-top: 1px solid #000000;
+header h1,
+h2,
+label,
+th,
+footer a {
+  color: #000000;
 }
 
-.dish {
-  filter: none;
-  border: 1px solid #999999;
-}
-
-.dish button {
-  display: none;
+th {
+  background-color: #ffffff;
 }
 
 a {
@@ -47,6 +91,20 @@ a {
   text-decoration: underline;
 }
 
+/* Блоки не должны разрываться между страницами */
+
+.dish,
+.order-column,
+table {
+  page-break-inside: avoid;
+  break-inside: avoid;
+}
+
+h2 {
+  page-break-after: avoid;
+}
+
 img {
   max-width: 100%;
+  height: auto;
 }

@@ -20,6 +20,7 @@
       <a href="#soups">Супы</a>
       <a href="#mains">Главные блюда</a>
       <a href="#drinks">Напитки</a>
+      <a href="#order">Заказ</a>
       <a href="auth.html">Вход</a>
       <a href="#contacts">Контакты</a>
     </nav>
@@ -105,6 +106,84 @@
           <button type="button">Добавить</button>
         </div>
       </div>
+    </section>
+
+    <section id="order">
+      <h2>Сделать заказ</h2>
+      <form class="order-form" action="https://httpbin.org/post" method="post">
+        <div class="order-column">
+          <h3>Ваш заказ</h3>
+          <p>
+            <label for="soup">Суп</label>
+            <select id="soup" name="soup">
+              <option value="">-- Выберите суп --</option>
+              <option value="tomato">Томатный суп с нутом - 120 руб.</option>
+              <option value="chicken">Куриный суп с овощами - 140 руб.</option>
+              <option value="cream">Крем-суп в хлебной корке - 160 руб.</option>
+            </select>
+          </p>
+          <p>
+            <label for="main">Главное блюдо</label>
+            <select id="main" name="main">
+              <option value="">-- Выберите главное блюдо --</option>
+              <option value="pasta">Паста с грибами в сливочном соусе - 380 руб.</option>
+              <option value="fish">Филе рыбы с овощами - 420 руб.</option>
+              <option value="rice">Рис с лососем - 360 руб.</option>
+            </select>
+          </p>
+          <p>
+            <label for="drink">Напиток</label>
+            <select id="drink" name="drink">
+              <option value="">-- Выберите напиток --</option>
+              <option value="orange">Апельсиновый сок - 120 руб.</option>
+              <option value="carrot">Морковный фреш - 110 руб.</option>
+              <option value="green">Зелёный фреш - 130 руб.</option>
+            </select>
+          </p>
+          <p>
+            <label for="comment">Комментарии к заказу</label>
+            <textarea id="comment" name="comment" rows="6"></textarea>
+          </p>
+        </div>
+
+        <div class="order-column">
+          <h3>Ваши данные</h3>
+          <p>
+            <label for="name">Имя</label>
+            <input id="name" type="text" name="name">
+          </p>
+          <p>
+            <label for="email">Email</label>
+            <input id="email" type="email" name="email">
+          </p>
+          <p>
+            <label><input type="checkbox" name="discounts" value="yes"> Получать информацию о скидках и акциях</label>
+          </p>
+          <p>
+            <label for="phone">Номер телефона</label>
+            <input id="phone" type="tel" name="phone">
+          </p>
+          <p>
+            <label for="address">Адрес доставки</label>
+            <input id="address" type="text" name="address">
+          </p>
+          <p class="note">Доставка осуществляется только по Москве</p>
+          <p>
+            <span class="note">Время доставки:</span><br>
+            <label><input type="radio" name="speed" value="fast" checked> Как можно скорее</label><br>
+            <label><input type="radio" name="speed" value="exact"> К указанному времени</label>
+          </p>
+          <p>
+            <label for="time">Укажите время доставки</label>
+            <input id="time" type="time" name="time">
+          </p>
+          <p class="note">Доступное время доставки с 7:00 до 23:00</p>
+          <p class="order-buttons">
+            <button type="reset">Сбросить</button>
+            <button type="submit">Отправить</button>
+          </p>
+        </div>
+      </form>
     </section>
   </main>
 
