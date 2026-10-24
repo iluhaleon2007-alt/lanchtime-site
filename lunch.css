@@ -38,6 +38,17 @@ main {
   color: #ffffff;
 }
 
+/* Выбранное блюдо выделяется рамкой, как при наведении */
+
+.dish.selected {
+  border: 2px solid #006600;
+}
+
+.dish.selected button {
+  background-color: #006600;
+  color: #ffffff;
+}
+
 /* Одинаковая высота картинок у всех блюд */
 
 .dish img {
@@ -99,6 +110,29 @@ main {
   font-size: 20px;
   font-weight: 600;
   margin-bottom: 15px;
+}
+
+/* Блоки выбранного заказа */
+
+.order-category {
+  font-size: 18px;
+  font-weight: 700;
+  margin-top: 20px;
+  margin-bottom: 5px;
+}
+
+.order-value {
+  font-size: 18px;
+  margin-bottom: 0;
+}
+
+#order-summary {
+  margin-bottom: 25px;
+}
+
+#order-empty {
+  font-size: 18px;
+  margin-bottom: 25px;
 }
 
 .note {

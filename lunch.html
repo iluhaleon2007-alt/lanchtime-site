@@ -29,83 +29,17 @@
   <main>
     <section id="soups">
       <h2>Супы</h2>
-      <div class="dishes">
-        <div class="dish">
-          <img src="soup1.jpg" alt="Томатный суп с нутом">
-          <p class="price">120 руб.</p>
-          <p class="name">Томатный суп с нутом</p>
-          <p class="weight">250 мл</p>
-          <button type="button">Добавить</button>
-        </div>
-        <div class="dish">
-          <img src="soup2.jpg" alt="Куриный суп с овощами">
-          <p class="price">140 руб.</p>
-          <p class="name">Куриный суп с овощами</p>
-          <p class="weight">300 мл</p>
-          <button type="button">Добавить</button>
-        </div>
-        <div class="dish">
-          <img src="soup3.jpg" alt="Крем-суп в хлебной корке">
-          <p class="price">160 руб.</p>
-          <p class="name">Крем-суп в хлебной корке</p>
-          <p class="weight">300 мл</p>
-          <button type="button">Добавить</button>
-        </div>
-      </div>
+      <div class="dishes"></div>
     </section>
 
     <section id="mains">
       <h2>Главные блюда</h2>
-      <div class="dishes">
-        <div class="dish">
-          <img src="main1.jpg" alt="Паста с грибами в сливочном соусе">
-          <p class="price">380 руб.</p>
-          <p class="name">Паста с грибами в сливочном соусе</p>
-          <p class="weight">350 г</p>
-          <button type="button">Добавить</button>
-        </div>
-        <div class="dish">
-          <img src="main2.jpg" alt="Филе рыбы с овощами на гриле">
-          <p class="price">420 руб.</p>
-          <p class="name">Филе рыбы с овощами</p>
-          <p class="weight">320 г</p>
-          <button type="button">Добавить</button>
-        </div>
-        <div class="dish">
-          <img src="main3.jpg" alt="Рис с лососем">
-          <p class="price">360 руб.</p>
-          <p class="name">Рис с лососем</p>
-          <p class="weight">300 г</p>
-          <button type="button">Добавить</button>
-        </div>
-      </div>
+      <div class="dishes"></div>
     </section>
 
     <section id="drinks">
       <h2>Напитки</h2>
-      <div class="dishes">
-        <div class="dish">
-          <img src="drink1.jpg" alt="Апельсиновый сок">
-          <p class="price">120 руб.</p>
-          <p class="name">Апельсиновый сок</p>
-          <p class="weight">300 мл</p>
-          <button type="button">Добавить</button>
-        </div>
-        <div class="dish">
-          <img src="drink2.jpg" alt="Морковный фреш">
-          <p class="price">110 руб.</p>
-          <p class="name">Морковный фреш</p>
-          <p class="weight">300 мл</p>
-          <button type="button">Добавить</button>
-        </div>
-        <div class="dish">
-          <img src="drink3.jpg" alt="Зелёный фреш">
-          <p class="price">130 руб.</p>
-          <p class="name">Зелёный фреш</p>
-          <p class="weight">300 мл</p>
-          <button type="button">Добавить</button>
-        </div>
-      </div>
+      <div class="dishes"></div>
     </section>
 
     <section id="order">
@@ -113,37 +47,27 @@
       <form class="order-form" action="https://httpbin.org/post" method="post">
         <div class="order-column">
           <h3>Ваш заказ</h3>
-          <p>
-            <label for="soup">Суп</label>
-            <select id="soup" name="soup">
-              <option value="">-- Выберите суп --</option>
-              <option value="tomato">Томатный суп с нутом - 120 руб.</option>
-              <option value="chicken">Куриный суп с овощами - 140 руб.</option>
-              <option value="cream">Крем-суп в хлебной корке - 160 руб.</option>
-            </select>
-          </p>
-          <p>
-            <label for="main">Главное блюдо</label>
-            <select id="main" name="main">
-              <option value="">-- Выберите главное блюдо --</option>
-              <option value="pasta">Паста с грибами в сливочном соусе - 380 руб.</option>
-              <option value="fish">Филе рыбы с овощами - 420 руб.</option>
-              <option value="rice">Рис с лососем - 360 руб.</option>
-            </select>
-          </p>
-          <p>
-            <label for="drink">Напиток</label>
-            <select id="drink" name="drink">
-              <option value="">-- Выберите напиток --</option>
-              <option value="orange">Апельсиновый сок - 120 руб.</option>
-              <option value="carrot">Морковный фреш - 110 руб.</option>
-              <option value="green">Зелёный фреш - 130 руб.</option>
-            </select>
-          </p>
+          <p id="order-empty">Ничего не выбрано</p>
+          <div id="order-summary" hidden>
+            <p class="order-category">Суп</p>
+            <p class="order-value" id="order-soup">Блюдо не выбрано</p>
+
+            <p class="order-category">Главное блюдо</p>
+            <p class="order-value" id="order-main">Блюдо не выбрано</p>
+
+            <p class="order-category">Напиток</p>
+            <p class="order-value" id="order-drink">Напиток не выбран</p>
+
+            <p class="order-category">Стоимость заказа</p>
+            <p class="order-value" id="order-total">0₽</p>
+          </div>
           <p>
             <label for="comment">Комментарии к заказу</label>
             <textarea id="comment" name="comment" rows="6"></textarea>
           </p>
+          <input type="hidden" id="hidden-soup" name="soup" value="">
+          <input type="hidden" id="hidden-main" name="main" value="">
+          <input type="hidden" id="hidden-drink" name="drink" value="">
         </div>
 
         <div class="order-column">
@@ -192,5 +116,9 @@
     <p>Почта: <a href="mailto:zakaz@lanchtime.ru">zakaz@lanchtime.ru</a></p>
     <p>Адрес: г. Москва, ул. Большая Дмитровка, д. 12</p>
   </footer>
+
+  <script src="data.js"></script>
+  <script src="render.js"></script>
+  <script src="order.js"></script>
 </body>
 </html>
