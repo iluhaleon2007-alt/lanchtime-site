@@ -19,7 +19,9 @@
       <a class="active" href="lunch.html">Собрать ланч</a>
       <a href="#soups">Супы</a>
       <a href="#mains">Главные блюда</a>
+      <a href="#salads">Салаты</a>
       <a href="#drinks">Напитки</a>
+      <a href="#desserts">Десерты</a>
       <a href="#order">Заказ</a>
       <a href="auth.html">Вход</a>
       <a href="#contacts">Контакты</a>
@@ -28,17 +30,51 @@
 
   <main>
     <section id="soups">
-      <h2>Супы</h2>
+      <h2>Выберите суп</h2>
+      <div class="filters">
+        <button type="button" data-kind="fish">рыбный</button>
+        <button type="button" data-kind="meat">мясной</button>
+        <button type="button" data-kind="veg">вегетарианский</button>
+      </div>
       <div class="dishes"></div>
     </section>
 
     <section id="mains">
-      <h2>Главные блюда</h2>
+      <h2>Выберите главное блюдо</h2>
+      <div class="filters">
+        <button type="button" data-kind="fish">рыбное</button>
+        <button type="button" data-kind="meat">мясное</button>
+        <button type="button" data-kind="veg">вегетарианское</button>
+      </div>
+      <div class="dishes"></div>
+    </section>
+
+    <section id="salads">
+      <h2>Выберите салат или стартер</h2>
+      <div class="filters">
+        <button type="button" data-kind="fish">рыбный</button>
+        <button type="button" data-kind="meat">мясной</button>
+        <button type="button" data-kind="veg">вегетарианский</button>
+      </div>
       <div class="dishes"></div>
     </section>
 
     <section id="drinks">
-      <h2>Напитки</h2>
+      <h2>Выберите напиток</h2>
+      <div class="filters">
+        <button type="button" data-kind="cold">холодный</button>
+        <button type="button" data-kind="hot">горячий</button>
+      </div>
+      <div class="dishes"></div>
+    </section>
+
+    <section id="desserts">
+      <h2>Выберите десерт</h2>
+      <div class="filters">
+        <button type="button" data-kind="small">маленькая порция</button>
+        <button type="button" data-kind="medium">средняя порция</button>
+        <button type="button" data-kind="large">большая порция</button>
+      </div>
       <div class="dishes"></div>
     </section>
 
@@ -55,8 +91,14 @@
             <p class="order-category">Главное блюдо</p>
             <p class="order-value" id="order-main">Блюдо не выбрано</p>
 
+            <p class="order-category">Салат/стартер</p>
+            <p class="order-value" id="order-salad">Блюдо не выбрано</p>
+
             <p class="order-category">Напиток</p>
             <p class="order-value" id="order-drink">Напиток не выбран</p>
+
+            <p class="order-category">Десерт</p>
+            <p class="order-value" id="order-dessert">Блюдо не выбрано</p>
 
             <p class="order-category">Стоимость заказа</p>
             <p class="order-value" id="order-total">0₽</p>
@@ -67,7 +109,9 @@
           </p>
           <input type="hidden" id="hidden-soup" name="soup" value="">
           <input type="hidden" id="hidden-main" name="main" value="">
+          <input type="hidden" id="hidden-salad" name="salad" value="">
           <input type="hidden" id="hidden-drink" name="drink" value="">
+          <input type="hidden" id="hidden-dessert" name="dessert" value="">
         </div>
 
         <div class="order-column">
@@ -120,5 +164,6 @@
   <script src="data.js"></script>
   <script src="render.js"></script>
   <script src="order.js"></script>
+  <script src="filter.js"></script>
 </body>
 </html>

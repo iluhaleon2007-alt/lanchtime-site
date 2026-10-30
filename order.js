@@ -3,7 +3,9 @@
 const selected = {
   soup: null,
   main: null,
-  drink: null
+  salad: null,
+  drink: null,
+  dessert: null
 };
 
 const emptyBlock = document.querySelector('#order-empty');
@@ -13,13 +15,17 @@ const totalBlock = document.querySelector('#order-total');
 const orderBlocks = {
   soup: document.querySelector('#order-soup'),
   main: document.querySelector('#order-main'),
-  drink: document.querySelector('#order-drink')
+  salad: document.querySelector('#order-salad'),
+  drink: document.querySelector('#order-drink'),
+  dessert: document.querySelector('#order-dessert')
 };
 
 const hiddenInputs = {
   soup: document.querySelector('#hidden-soup'),
   main: document.querySelector('#hidden-main'),
-  drink: document.querySelector('#hidden-drink')
+  salad: document.querySelector('#hidden-salad'),
+  drink: document.querySelector('#hidden-drink'),
+  dessert: document.querySelector('#hidden-dessert')
 };
 
 // Текст для незаполненной категории
