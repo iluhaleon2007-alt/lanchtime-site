@@ -274,7 +274,7 @@ const dishes = [
     category: 'dessert',
     kind: 'medium',
     count: '350 гр',
-    image: 'desserts/donuts'
+    image: 'desserts/donuts2'
   },
   {
     keyword: 'donuts2',
@@ -283,6 +283,6 @@ const dishes = [
     category: 'dessert',
     kind: 'large',
     count: '700 гр',
-    image: 'desserts/donuts2'
+    image: 'desserts/donuts'
   }
 ];
