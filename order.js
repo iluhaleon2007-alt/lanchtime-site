@@ -45,7 +45,10 @@ function findDish(keyword) {
 // Обновляет блок "Ваш заказ" и итоговую стоимость
 
 function updateOrder() {
-  const hasSelection = selected.soup || selected.main || selected.drink;
+  // Достаточно любого выбранного блюда, список категорий не дублируем
+  const hasSelection = Object.values(selected).some(function (dish) {
+    return dish !== null;
+  });
 
   emptyBlock.hidden = Boolean(hasSelection);
   summaryBlock.hidden = !hasSelection;
