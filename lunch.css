@@ -219,3 +219,112 @@ main {
     border-radius: 20px;
   }
 }
+
+/* Блок доступных комбо */
+
+.combos {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px 20px;
+  margin-bottom: 20px;
+}
+
+.combo {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.combo-dish {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 76px;
+}
+
+/* transform при наведении на иконку */
+
+.combo-dish img {
+  width: 56px;
+  height: 56px;
+  margin: 0;
+  transition: transform 0.25s;
+}
+
+.combo-dish img:hover {
+  transform: translateY(-8px) scale(1.1);
+}
+
+.combo-caption {
+  font-size: 14px;
+  text-align: center;
+  margin: 5px 0 0;
+}
+
+/* Шрифт на 2 пункта меньше подписи */
+
+.combo-note {
+  font-size: 12px;
+  font-style: italic;
+  text-align: center;
+  margin: 3px 0 0;
+}
+
+/* Ячейке с десертом нужно больше места для примечания */
+
+.combo-desert .combo-dish {
+  width: 230px;
+}
+
+/* Уведомление */
+
+.notification {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1000;
+  width: 460px;
+  max-width: 90%;
+  padding: 45px 35px;
+  background-color: #ffffff;
+  border: 2px solid #000000;
+  text-align: center;
+}
+
+.notification-text {
+  font-size: 20px;
+  line-height: 1.4;
+  margin-bottom: 30px;
+}
+
+.notification-button {
+  padding: 10px 35px;
+  background-color: #ffffff;
+  color: #000000;
+  font-family: 'Montserrat', Arial, sans-serif;
+  font-size: 18px;
+  border: 2px solid #000000;
+  border-radius: 25px;
+  cursor: pointer;
+}
+
+.notification-button:hover {
+  background-color: #006600;
+  color: #ffffff;
+}
+
+/* Комбо на планшетах и телефонах */
+
+@media (max-width: 800px) {
+  .combos {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .combos {
+    grid-template-columns: 1fr;
+  }
+}
